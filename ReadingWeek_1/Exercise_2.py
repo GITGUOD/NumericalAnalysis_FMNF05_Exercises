@@ -29,4 +29,33 @@ a = makeFloatToAnyBase(0.4, 2)
 b = makeFloatToAnyBase(0.3, 2)
 print(a, b)
 
-print(0.01100110011001100 - 0.01001100110011001)
+c = makeFloatToAnyBase(0.1, 2)
+
+print(c)
+
+import math as math
+def f(x):
+    return math.cos(x) - math.sin(x)
+
+def bisection_method(f, a, b, tolerance = 10^-6, k=20):
+    for _ in range(k):
+        mid = (a + b)/2
+        fc = f(mid)
+        if abs(fc) < tolerance or (b - a )/ 2 < tolerance:
+            return mid # solution found
+        
+        if f(a) * fc < 0:
+            b = mid
+        else:
+            a = mid
+
+    return (a+b)/2
+
+a, b = 0, 1
+
+root = bisection_method(f, a, b)
+print("Root: ", root)
+
+print("Cosinus with our root", math.cos(root))
+print("Sinus with our root", math.sin(root))
+
