@@ -163,3 +163,13 @@ sol_c, iter_c = fixed_point_iteration(g_c, g_c_prime, x0_c)
 print(f"(a) x = {sol_a:.8f} in {iter_a} iterations")
 print(f"(b) x = {sol_b:.8f} in {iter_b} iterations")
 print(f"(c) x = {sol_c:.8f} in {iter_c} iterations")
+
+print("Test")
+
+print("Test")
+print("Test")
+
+print("Test")
+print("Test")
+print("Test")
+print("Test")
