@@ -164,12 +164,8 @@ print(f"Solution: {sol_a}")
 print(f"Solution: {sol_b}")
 print(f"Solution: {sol_c}")
 
-print("Test")
+x = 5.5
+for i in range(110):
+    x = math.cos(x)**2 + 5
 
-print("Test")
-print("Test")
-
-print("Test")
-print("Test")
-print("Test")
-print("Test")
+print(f"{x:.4f}")
