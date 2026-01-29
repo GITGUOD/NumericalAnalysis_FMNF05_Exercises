@@ -137,3 +137,29 @@ solution_h = fixed_point_iteration(h, h_prime, x0)
 print("Solution for f(x):", solution_f)
 print("Solution for g(x):", solution_g)
 print("Solution for h(x):", solution_h)
+
+
+# (a) x^3 = 2x + 2
+g_a = lambda x: (2*x + 2)**(1/3)
+g_a_prime = lambda x: (2/3)*(2*x + 2)**(-2/3)
+
+# (b) e^x + x = 7
+g_b = lambda x: 7 - math.exp(x)
+g_b_prime = lambda x: -math.exp(x)
+
+# (c) e^x + sin(x) = 4
+g_c = lambda x: math.log(4 - math.sin(x))
+g_c_prime = lambda x: -math.cos(x)/(4 - math.sin(x))
+
+# Initial guesses
+x0_a = 1.5
+x0_b = 1.0
+x0_c = 1.0
+
+sol_a, iter_a = fixed_point_iteration(g_a, g_a_prime, x0_a)
+sol_b, iter_b = fixed_point_iteration(g_b, g_b_prime, x0_b)
+sol_c, iter_c = fixed_point_iteration(g_c, g_c_prime, x0_c)
+
+print(f"(a) x = {sol_a:.8f} in {iter_a} iterations")
+print(f"(b) x = {sol_b:.8f} in {iter_b} iterations")
+print(f"(c) x = {sol_c:.8f} in {iter_c} iterations")
