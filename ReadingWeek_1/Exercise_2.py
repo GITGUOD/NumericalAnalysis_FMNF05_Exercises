@@ -156,13 +156,13 @@ x0_a = 1.5
 x0_b = 1.0
 x0_c = 1.0
 
-sol_a, iter_a = fixed_point_iteration(g_a, g_a_prime, x0_a)
-sol_b, iter_b = fixed_point_iteration(g_b, g_b_prime, x0_b)
-sol_c, iter_c = fixed_point_iteration(g_c, g_c_prime, x0_c)
+sol_a= fixed_point_iteration(g_a, g_a_prime, x0_a)
+sol_b = fixed_point_iteration(g_b, g_b_prime, x0_b)
+sol_c= fixed_point_iteration(g_c, g_c_prime, x0_c)
 
-print(f"(a) x = {sol_a:.8f} in {iter_a} iterations")
-print(f"(b) x = {sol_b:.8f} in {iter_b} iterations")
-print(f"(c) x = {sol_c:.8f} in {iter_c} iterations")
+print(f"Solution: {sol_a}")
+print(f"Solution: {sol_b}")
+print(f"Solution: {sol_c}")
 
 print("Test")
 
